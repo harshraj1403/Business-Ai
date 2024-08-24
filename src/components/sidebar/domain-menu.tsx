@@ -87,7 +87,7 @@ const DomainMenu = ({ domains, min }: Props) => {
               />
               {!min && <p className="text-sm">{domain.name}</p>}
             </Link>
-          ))}
+          ))} 
       </div>
     </div>
   )
