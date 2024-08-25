@@ -105,4 +105,4 @@ export const AddProductSchema = z.object({
       message: 'Only JPG, JPEG & PNG are accepted file formats',
     }),
   price: z.string(),
-})
+}) 

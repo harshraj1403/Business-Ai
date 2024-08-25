@@ -14,3 +14,40 @@ export const pusherServer = new PusherServer({
   cluster: process.env.NEXT_PUBLIC_PUSHER_APP_CLUSTOR as string,
   useTLS: true,
 })
+
+export const extractEmailsFromString = (text: string) => {
+  return text.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/gi)
+}
+
+export const getMonthName = (month: number) => {
+  return month == 1
+    ? 'Jan'
+    : month == 2
+    ? 'Feb'
+    : month == 3
+    ? 'Mar'
+    : month == 4
+    ? 'Apr'
+    : month == 5
+    ? 'May'
+    : month == 6
+    ? 'Jun'
+    : month == 7
+    ? 'Jul'
+    : month == 8
+    ? 'Aug'
+    : month == 9
+    ? 'Sep'
+    : month == 10
+    ? 'Oct'
+    : month == 11
+    ? 'Nov'
+    : month == 12 && 'Dec'
+}
+export const postToParent = (message: string) => {
+  window.parent.postMessage(message, '*')
+}
+
+export const extractURLfromString = (url: string) => {
+  return url.match(/https?:\/\/[^\s"<>]+/)
+}
