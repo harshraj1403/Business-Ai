@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription } from '../ui/card'
 import { Check, CheckCircle2, Plus } from 'lucide-react'
 import { pricingCards } from '@/constants/landing-page'
 import Modal from '../mondal'
-// import SubscriptionForm from '../forms/settings/subscription-form'
+ import SubscriptionForm from '../forms/settings/subscription-form'
 import Image from 'next/image'
 
 type Props = {}
@@ -52,7 +52,8 @@ const BillingSettings = async (props: Props) => {
             )
           }
         >
-          {/* <SubscriptionForm plan={plan!} /> */}
+          
+          <SubscriptionForm plan={plan!} />
         </Modal>
       </div>
       <div className="lg:col-span-2">

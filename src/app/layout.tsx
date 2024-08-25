@@ -22,14 +22,14 @@ export default function RootLayout({
     <html lang="en">
       
       <body className={jakarta.className}>
-      {/* <ThemeProvider
+      <ThemeProvider
             attribute="class"
             defaultTheme="light" // Enforce light theme by default
             disableTransitionOnChange
-          > */}
+          >
         {children}
         <Toaster />
-        {/* </ThemeProvider> */}
+        </ThemeProvider>
         </body>
     </html>
     </ClerkProvider>
